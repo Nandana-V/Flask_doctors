@@ -1,0 +1,62 @@
+<html>
+  <head>
+    <style>
+      .btn {
+                background-color: #67e84e;
+                color: black;
+                font-size: 16px;
+                padding: 16px 30px;
+                border: none;
+            }
+      table {
+  border-collapse: collapse;
+  width: 80%;
+}
+
+th,
+td {
+  border: 1px solid #0e0c0c;
+  text-align: left;
+  padding: 8px;
+  font-size: 32px;
+}
+
+th {
+  background-color: rgb(117, 201, 250);
+}
+
+td {
+  background-color: rgb(208, 244, 199);
+}
+    </style>
+  </head>
+  <body>
+    <br> <br>
+            <a href="addappointment">
+                <button class="btn">Add an appointment</button>
+            </a>
+            <br><br><br>
+    <table>
+      <tr>
+        <th>Patient Id</th>
+        <th>Name</th>
+        <th>Mobile</th>
+        <th>Address</th>
+        <th>City</th>
+        <th>Created On</th>
+        <th>Updated On</th>
+      </tr>
+      {% for patient in Details %}
+      <tr>
+        <td> {{patient[0]}} </td>
+        <td> {{patient[1]}} </td>
+        <td> {{patient[2]}} </td>
+        <td> {{patient[3]}} </td>
+        <td> {{patient[4]}} </td>
+        <td> {{patient[5]}} </td>
+        <td> {{patient[6]}} </td>   
+      </tr>
+      {% endfor %}
+    </table>
+  </body>
+</html>
